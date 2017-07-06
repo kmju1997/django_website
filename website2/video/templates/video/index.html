@@ -1,0 +1,9 @@
+{% if all_category %}
+    <ul>
+        {% for i in all_category %}
+        <li><a href="/video/{{ i.id }}/">{{ i.category }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3>You don't have any video</h3>
+{% endif %}
