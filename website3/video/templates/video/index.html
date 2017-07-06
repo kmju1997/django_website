@@ -1,0 +1,10 @@
+{% if all_category %}
+    <ul>
+        <h3>Category List: </h3>
+        {% for category in all_category %}
+        <li><a href="{% url 'video:detail' category.id %}">{{ category.category }}</a> </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3>You don't have any videos</h3>
+{% endif %}
